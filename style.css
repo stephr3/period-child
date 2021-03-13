@@ -13,3 +13,9 @@
 body {
     background-color: #206b9f;
 }
+
+.filters-container {
+	background-color: white;
+	padding: 1.5em;
+	margin-bottom: .75em;
+}
