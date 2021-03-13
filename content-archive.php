@@ -11,9 +11,7 @@
 			</div>
 			<div class="post-content">
 				<ul class="no-bullets">
-					<?php if( get_field('volunteers_needed') == 'Yes' ): ?>
-						<li class="vols-needed-li"><i>* Volunteers Needed *</i></li>
-					<?php endif ?>
+					<li><b>Address:</b> <?php the_field('address'); ?> <?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zip'); ?></li>				
 
 					<?php if( get_field('class_format') ): ?>
 						<li><b>Format:</b> <?php the_field('class_format'); ?></li>

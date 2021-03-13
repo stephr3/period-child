@@ -30,3 +30,22 @@ body {
     margin-top: -.5em;
     color: #524e4e;
 }
+
+.post-title {
+	font-size: 1.25em;
+}
+
+.post-content h3 {
+	font-size: 1.17em;
+	line-height: 1.75em;
+}
+
+.further-reading a {
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.class-description {
+	margin: 0 0 1em;
+	font-size: .9em;
+}
