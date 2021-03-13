@@ -14,21 +14,9 @@ body {
     background-color: #206b9f;
 }
 
-.filters-container {
-	background-color: white;
-	padding: 1.5em;
-	margin-bottom: .75em;
-}
-
-.no-bullets {
-	list-style: none;
-	margin: 0 0 1.5em 0;
-}
-
-.vols-needed-li {
-    margin-bottom: .5em;
-    margin-top: -.5em;
-    color: #524e4e;
+/* Period Theme Modifications */
+.post-header {
+	margin: 0 0 1em 0;
 }
 
 .post-title {
@@ -45,7 +33,29 @@ body {
     text-decoration: underline;
 }
 
+.filters-container {
+	background-color: white;
+	padding: 1.5em;
+	margin-bottom: .75em;
+}
+
+/* Custom Styles */
+.no-bullets {
+	list-style: none;
+	margin: 0 0 1.5em 0;
+}
+
+.vols-needed-li {
+    margin-bottom: .5em;
+    margin-top: -.5em;
+    color: #524e4e;
+}
+
 .class-description {
 	margin: 0 0 1em;
-	font-size: .9em;
+}
+
+.last-updated {
+	font-style: italic;
+	margin: .5em 0;
 }

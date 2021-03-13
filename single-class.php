@@ -11,6 +11,7 @@ do_action( 'after_archive_header' ); ?>
 				<h1 class='post-title'><?php the_title(); ?></h1>
 			</div>
 			<div class="post-content">
+				<p class="last-updated">Last updated on <?php echo get_the_modified_date() ?></p>
 				<h3>Basic Information</h3>
 				<ul class="no-bullets">
 					<li><b>Region:</b> <?php the_field('region'); ?></li>
@@ -81,7 +82,7 @@ do_action( 'after_archive_header' ); ?>
 						<?php endif ?>
 
 						<?php if( get_field('notes') ): ?>
-							<li><b>Admin Notes:</b> <?php the_field('notes'); ?></li>
+							<li><b>Admin Notes:</b> <p class="class-description"><?php the_field('notes'); ?></p></li>
 						<?php endif ?>
 					<?php endif ?>
 				</ul>
