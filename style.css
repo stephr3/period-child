@@ -39,6 +39,29 @@ body {
 	margin-bottom: .75em;
 }
 
+.main-search-content-container{
+	display: flex;
+}
+
+.search-container {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+}
+
+.filters-button-container {
+	display: flex;
+}
+
+.filters-options-container{
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    display: none;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
 /* Custom Styles */
 .no-bullets {
 	list-style: none;
