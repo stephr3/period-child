@@ -59,3 +59,27 @@ body {
 	font-style: italic;
 	margin: .5em 0;
 }
+
+/*--Footer Style--*/
+@media only screen and (min-width: 300px) {
+  .nav-list ul {
+    list-style-type: none;
+  }
+  .nav-list li {
+    margin: 5px;
+  }
+
+  .social-list ul {
+    list-style-type: none;
+  }
+  .social-list li {
+    display: inline;
+    margin: 3px;
+  }
+}
+@media only screen and (min-width: 521px) {
+  .nav-list li {
+    display: inline;
+    margin: 10px;
+  }
+}
