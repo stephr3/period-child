@@ -21,9 +21,9 @@
             <nav class="social-list">
                 <ul>
                     <li><a href="https://www.facebook.com/PortlandEsl"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
-                    <li>For students</li>
+                    <li>For Students</li>
                     <li><a href="https://www.facebook.com/groups/PortlandESLNetwork"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
-                    <li>For teachers</li>
+                    <li>For Teachers</li>
                     <li><a href="https://www.youtube.com/channel/UC07ICj_72wCrsQ0mSpQ0bRg"><i class="fab fa-youtube fa-2x"></i></a></li>
                     <li>YouTube</li>
                 </ul>
