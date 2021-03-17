@@ -61,7 +61,7 @@ body {
 }
 
 /*--Footer Style--*/
-@media only screen and (min-width: 300px) {
+@media only screen and (min-width: 100px) {
   .nav-list ul {
     list-style-type: none;
   }
@@ -73,13 +73,14 @@ body {
     list-style-type: none;
   }
   .social-list li {
-    display: inline;
     margin: 3px;
   }
 }
 @media only screen and (min-width: 521px) {
   .nav-list li {
     display: inline;
-    margin: 10px;
-  }
+      }
+  .social-list li {
+    display: inline;
+     }
 }
