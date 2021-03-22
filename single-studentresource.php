@@ -26,10 +26,7 @@ do_action( 'after_archive_header' ); ?>
 						<li><?php the_field('tag'); ?></li>
 					<?php endif ?>
                 </ul>
-				
-		
-
-					
+							
 			</div>
 			<nav class="further-reading">
 				<div class="previous">
