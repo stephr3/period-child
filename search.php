@@ -1,22 +1,30 @@
 <?php get_header();
 
+require get_theme_file_path('/includes/searchLogic.php');
+
+$wp_query = searchResults();
+
+if(isset($_GET['clpse'])) {
+	$clpse = sanitize_text_field($_GET['clpse']);
+}
+
 get_template_part( 'content/archive-header' );
 
 do_action( 'after_archive_header' ); ?>
 <div id="loop-container" class="loop-container">
 	<div class="filters-container">
 		<form method="GET" id="search-form" action="http://portland-esl-network.local/classes/">
-			<div class="main-search-content-container">
-				<div class="search-container">
+			<div class="main-search-content-container container" >
+				<div class="search-container container">
 					<input type="text" placeholder="Search.." name="s">
 					<button type="submit" ><i class="fa fa-search" aria-hidden="true"></i></button>
 				</div>
 				<div class="filters-button-container">
-					<button type="button" id="collapse-button" class="collapsible btn btn-primary" data-toggle="collapse" data-target="#collapsible-field" aria-expanded="false" aria-controls="collapsible-field"> <span>Filters</span> </button>
-					<input id="collapse" name="clpse" type="hidden" value="0">
+					<button type="button" id="collapse-button" class="collapsible btn btn-primary  <?php echo (esc_attr($clpse) == '0'? 'collapsed' : '')?>" data-toggle="collapse" data-target="#collapsible-field" aria-expanded="false" aria-controls="collapsible-field"> <span>Filters</span> </button>
+					<input id="collapse" name="clpse" type="hidden" value="<?php echo esc_attr($clpse) ?>">
 				</div>
 			</div>
-			<div class="filters-options container collapse" id="collapsible-field">
+			<div class="filters-options container collapse <?php echo (esc_attr($clpse) == '1'? 'show' : '')?>" id="collapsible-field">
 				<div class="options-card card card-body">
 					<div class="row">
 						<div class="region container col">
@@ -168,8 +176,8 @@ do_action( 'after_archive_header' ); ?>
 							  <select class="dropdown" name="cc" id="childcare">
 							  	<option value="" selected="selected" data-i="0">- Select -</option>
 							    <option value="1"> Children Welcome </option>
-							    <option value="2"> Childcare Available </option>
-							    <option value="3"> No Childcare Available </option>
+							    <option value="2"> Childcare Avaliable </option>
+							    <option value="3"> No Childcare Avaliable </option>
 							  </select>
 							</div>
 						</div>
@@ -225,11 +233,10 @@ do_action( 'after_archive_header' ); ?>
 			</div>
 		</form>
 	</div>
-
     <?php
-    if ( have_posts() ) :
-        while ( have_posts() ) :
-            the_post();
+    if ( $wp_query->have_posts() ) :
+        while ($wp_query->have_posts() ) :
+            $wp_query->the_post();
             ct_period_get_content_template();
         endwhile;
     endif;
