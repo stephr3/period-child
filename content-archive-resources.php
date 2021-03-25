@@ -8,10 +8,13 @@
 				<h2 class='post-title'>
 					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
 				</h2>
-				
 			</div>
 			<div class="post-content">
 				<?php ct_period_excerpt(); ?>
+				<form action='<?php the_field('resource_link');?>' target="_blank">
+				    <input type="submit" value="Visit Resource Site"/>
+                </form>
+				<br>
 				<ul class="no-bullets">
                 <?php if( get_field('tag') ): ?>
 						<li><?php the_field('tag'); ?></li>
