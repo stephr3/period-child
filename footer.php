@@ -1,36 +1,48 @@
-<?php do_action( 'main_bottom' ); ?>
+<?php do_action('main_bottom'); ?>
 </section> <!-- .main -->
-<?php get_sidebar( 'primary' ); ?>
-<?php do_action( 'after_main' ); ?>
+<?php get_sidebar('primary'); ?>
+<?php do_action('after_main'); ?>
 </div><!-- .max-width -->
 </div><!-- .primary-container -->
 
-<?php 
-// Elementor `footer` location
-if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) :
-?>
-<footer id="site-footer" class="site-footer" role="contentinfo">
-    <div class="max-width">
-        <?php do_action( 'footer_top' ); ?>
-    </div>
-    <div class="design-credit">
-        <span>
-            <?php
-            $footer_text = sprintf( __( '<a href="%1$s" rel="nofollow">%2$s WordPress Theme</a> by Compete Themes.', 'period' ), 'https://www.competethemes.com/period/', wp_get_theme( get_template() ) );
-            $footer_text = apply_filters( 'ct_period_footer_text', $footer_text );
-            echo do_shortcode( wp_kses_post( $footer_text ) );
-            ?>
-        </span>
-    </div>
-</footer>
-<?php endif; ?>
+    <footer id="site-footer" class="site-footer" role="contentinfo">
+        <div class="max-width">
+            <?php do_action('footer_top'); ?>
+        </div>
+        <div class="design-credit">
+
+            <nav class="nav-list">
+                <ul>
+                    <li><a href="<?php echo site_url('/about-us') ?>">About Us</a></li>
+                    <li><a href="<?php echo site_url('/volunteer-with-us') ?>">Volunteer With Us</a></li>
+                    <li><a href="<?php echo site_url('/submit-a-new-class') ?>">Submit a New Class</a></li>
+                </ul>
+            </nav>
+            <nav class="social-list">
+                <ul>
+                    <li><a href="https://www.facebook.com/PortlandEsl"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
+                    <li>For Students</li>
+                    <li><a href="https://www.facebook.com/groups/PortlandESLNetwork"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
+                    <li>For Teachers</li>
+                    <li><a href="https://www.youtube.com/channel/UC07ICj_72wCrsQ0mSpQ0bRg"><i class="fab fa-youtube fa-2x"></i></a></li>
+                    <li>YouTube</li>
+                </ul>
+            </nav>
+
+            <p>Copyright &#169; 2021 Portland ESL Network</p>
+
+        </div>
+    </footer>
+
 </div><!-- .overflow-container -->
 
-<?php do_action( 'body_bottom' ); ?>
+<?php do_action('body_bottom'); ?>
 
 <?php wp_footer(); ?>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
