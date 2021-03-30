@@ -1,14 +1,22 @@
 <?php get_header();
 
+require get_theme_file_path('/includes/searchLogic.php');
+
+$wp_query = searchResults();
+
 get_template_part( 'content/archive-header' );
+
+if(isset($_GET['s'])) {
+	$search = sanitize_text_field($_GET['s']);
+}
 
 do_action( 'after_archive_header' ); ?>
 <div id="loop-container" class="loop-container">
 	<div class="filters-container">
 		<form method="GET" id="search-form" action="http://portland-esl-network.local/classes/">
-			<div class="main-search-content-container">
-				<div class="search-container">
-					<input type="text" placeholder="Search.." name="s">
+			<div class="main-search-content-container container" >
+				<div class="search-container container">
+					<input type="text" placeholder="Search.." name="s" value="<?php echo esc_attr($search); ?>">
 					<button type="submit" ><i class="fa fa-search" aria-hidden="true"></i></button>
 				</div>
 				<div class="filters-button-container">
@@ -227,9 +235,9 @@ do_action( 'after_archive_header' ); ?>
 	</div>
 
     <?php
-    if ( have_posts() ) :
-        while ( have_posts() ) :
-            the_post();
+if ( $wp_query->have_posts() ) :
+        while ($wp_query->have_posts() ) :
+            $wp_query->the_post();
             ct_period_get_content_template();
         endwhile;
     endif;

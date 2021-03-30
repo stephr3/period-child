@@ -8,6 +8,10 @@ if(isset($_GET['clpse'])) {
 	$clpse = sanitize_text_field($_GET['clpse']);
 }
 
+if(isset($_GET['s'])) {
+	$search = sanitize_text_field($_GET['s']);
+}
+
 get_template_part( 'content/archive-header' );
 
 do_action( 'after_archive_header' ); ?>
@@ -16,7 +20,7 @@ do_action( 'after_archive_header' ); ?>
 		<form method="GET" id="search-form" action="http://portland-esl-network.local/classes/">
 			<div class="main-search-content-container container" >
 				<div class="search-container container">
-					<input type="text" placeholder="Search.." name="s">
+					<input type="text" placeholder="Search.." name="s" value="<?php echo esc_attr($search); ?>">
 					<button type="submit" ><i class="fa fa-search" aria-hidden="true"></i></button>
 				</div>
 				<div class="filters-button-container">
