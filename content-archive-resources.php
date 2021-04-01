@@ -14,12 +14,6 @@
 				<form action='<?php the_field('resource_link');?>' target="_blank">
 				    <input type="submit" value="Visit Resource Site"/>
                 </form>
-				<br>
-				<ul class="no-bullets">
-                <?php if( get_field('tag') ): ?>
-						<li><?php the_field('tag'); ?></li>
-					<?php endif ?>
-                </ul>
 			</div>
 		</div>
 	</article>
