@@ -5,14 +5,18 @@
 		<div class="post-container">
 			<div class='post-header'>
 				<?php do_action( 'sticky_post_status' ); ?>
-				<h2 class='post-title'>
+				<h1 class='post-title'>
 					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
-				</h2>
+				</h1>
 			</div>
 			<div class="post-content">
 				<?php ct_period_excerpt(); ?>
+				<form action='<?php echo esc_url( get_permalink() );?>' >
+				    <input class='more-button' type="submit" value="Learn More"/>
+                </form>
+
 				<form action='<?php the_field('resource_link');?>' target="_blank">
-				    <input type="submit" value="Visit Resource Site"/>
+				    <input class='more-button' type="submit" value="Visit Resource Site"/>
                 </form>
 			</div>
 		</div>
