@@ -28,9 +28,9 @@ $youtube = "https://www.youtube.com/channel/UC07ICj_72wCrsQ0mSpQ0bRg";
                     <li><a href=<?php echo $fbStudent?> target="_blank"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
                     <li><a href=<?php echo $fbStudent?> target="_blank">For Students</a></li>
                     <li><a href=<?php echo $fbTeacher?> target="_blank"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
-                    <li><a href=<?php echo $fbTeacher?> target="_blank">For Teachers</li>
+                    <li><a href=<?php echo $fbTeacher?> target="_blank">For Teachers</a></li>
                     <li><a href=<?php echo $youtube?> target="_blank"><i class="fab fa-youtube fa-2x"></i></a></li>
-                    <li><a href=<?php echo $youtube?> target="_blank">YouTube</li>
+                    <li><a href=<?php echo $youtube?> target="_blank">YouTube</a></li>
                 </ul>
             </nav>
 

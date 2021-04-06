@@ -26,9 +26,9 @@ do_action( 'after_archive_header' ); ?>
 						<li><?php the_field('tag'); ?></li>
 					<?php endif ?>
                 </ul>
-				<h4>Site Preview</h4>
+				<!--<h4>Site Preview</h4>
 				<iframe width="700" height="400" src="<?php the_field('resource_link');?>"></iframe>
-				<br>			
+				<br>-->			
 			</div>
 			<nav class="further-reading">
 				<div class="previous">
