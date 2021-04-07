@@ -10,7 +10,7 @@
 				</h1>
 			</div>
 			<div class="post-content">
-				<?php ct_period_excerpt(); ?>
+				<?php $content = get_the_content(); echo mb_strimwidth($content, 0, 200, '...');?>
 				<form action='<?php echo esc_url( get_permalink() );?>' >
 				    <input class='more-button' type="submit" value="Learn More"/>
                 </form>
