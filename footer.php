@@ -2,6 +2,11 @@
 </section> <!-- .main -->
 <?php get_sidebar('primary'); ?>
 <?php do_action('after_main'); ?>
+<?php
+$fbStudent = "https://www.facebook.com/PortlandEsl";
+$fbTeacher = "https://www.facebook.com/groups/PortlandESLNetwork";
+$youtube = "https://www.youtube.com/channel/UC07ICj_72wCrsQ0mSpQ0bRg";
+?>
 </div><!-- .max-width -->
 </div><!-- .primary-container -->
 
@@ -20,12 +25,12 @@
             </nav>
             <nav class="social-list">
                 <ul>
-                    <li><a href="https://www.facebook.com/PortlandEsl"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
-                    <li>For Students</li>
-                    <li><a href="https://www.facebook.com/groups/PortlandESLNetwork"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
-                    <li>For Teachers</li>
-                    <li><a href="https://www.youtube.com/channel/UC07ICj_72wCrsQ0mSpQ0bRg"><i class="fab fa-youtube fa-2x"></i></a></li>
-                    <li>YouTube</li>
+                    <li><a href=<?php echo $fbStudent?> target="_blank"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
+                    <li><a href=<?php echo $fbStudent?> target="_blank">For Students</a></li>
+                    <li><a href=<?php echo $fbTeacher?> target="_blank"><i class="fab fa-facebook-square fa-2x"> </i></a></li>
+                    <li><a href=<?php echo $fbTeacher?> target="_blank">For Teachers</a></li>
+                    <li><a href=<?php echo $youtube?> target="_blank"><i class="fab fa-youtube fa-2x"></i></a></li>
+                    <li><a href=<?php echo $youtube?> target="_blank">YouTube</a></li>
                 </ul>
             </nav>
 

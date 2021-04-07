@@ -89,6 +89,20 @@ body {
 	margin: .5em 0;
 }
 
+.post-content input[type=submit]{
+  font-weight: 700;
+  padding: 6px 12px;
+  }
+
+.more-button{
+  float: left;
+  margin-top: 1em;
+  margin-right: 1em;
+  width: 133.58px;
+  height: 38px;
+
+}
+
 /*--Footer Style--*/
 @media only screen and (min-width: 100px) {
   .nav-list ul {
