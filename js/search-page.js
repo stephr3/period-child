@@ -8,7 +8,6 @@ if(sessionStorage.length === 0){
 // This JS file will work on all period theme pages. 
 // this is a naive way to limit this code to the search page .../classes/
 if((/\/classes\/\B|\/classes\/page\/\d\//).test(window.location.pathname)){
-	console.log("works")
 
 /////////////////////////////////////////////////////////////////////
 // Filter collaspe state persist on reload and pagination
@@ -45,7 +44,6 @@ if((/\/classes\/\B|\/classes\/page\/\d\//).test(window.location.pathname)){
 // TODO
 	function LoadFiltersStateFromUrl() {
 		let searchQuery = window.location.search;
-
 	}
 /////////////////////////////////////////////////////////////////////
 // Filter values presist on reload
