@@ -8,7 +8,7 @@ do_action( 'after_archive_header' ); ?>
 	
     <?php
         $key = 'tag';
-        $field = get_field_object($key); 
+        $field = acf_get_field($key);
       
     if ($field) {
        foreach ($field['choices'] as $key => $value) {
