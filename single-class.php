@@ -127,8 +127,19 @@ do_action( 'after_archive_header' ); ?>
 				</div>
 			</nav>
 		</div>
-	</article><?php
+	</article>
 
-ct_period_pagination();
+<?php
+	$mapLocation = get_field('map_location');
+?>
+<div class="acf-map">
+	<div class="marker" data-lat="<?php echo $mapLocation['lat']; ?>" data-lng="<?php echo $mapLocation['lng'] ?>" >
+		<h3><?php the_title(); ?></h3>
+		<?php echo $mapLocation['address']; ?> 
+		<br>
+		<?php the_field('phone'); ?>
+	</div>
+</div>	
+<?php
 
 get_footer();
