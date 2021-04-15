@@ -5,7 +5,7 @@ require get_theme_file_path('/includes/searchLogic.php');
 $wp_query = new WP_query(array(
 	'posts_per_page'	=> -1,
 	'post_type' 		=> 'class',
-	'meta_key' 		=> 'happening_now',
+	'meta_key' 			=> 'happening_now',
 	'meta_value'		=> 'Yes'
 	));
 ?>
