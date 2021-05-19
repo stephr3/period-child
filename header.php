@@ -16,6 +16,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 			do_action( 'wp_body_open' );
 } ?>
 <a class="skip-content" href="#main"><?php esc_html_e( 'Press "Enter" to skip to content', 'period' ); ?></a>
+	
 <div id="overflow-container" class="overflow-container">
 	<?php do_action( 'before_header' ); ?>
 	<?php

@@ -4,7 +4,7 @@ get_template_part( 'content/archive-header' );
 
 do_action( 'after_archive_header' ); ?>
 
-<div id="loop-container" class="loop-container">
+<!--<div id="loop-container" class="loop-container">-->
 	
     <?php
         $key = 'tag';
@@ -18,20 +18,27 @@ do_action( 'after_archive_header' ); ?>
             'meta_value'=> $value
          ));
         ?>
-        <div class="filters-container"><h2> <?php echo ($value);  ?> </h2></div>        
+        <div class="filters-container">
+        <h2> <?php echo ($value);  ?>  </h2>
+        <!--<button type="button" data-toggle="collapse-container" data-target="#resource-items"><i class="fas fa-chevron-down"></i></button>-->
+            <button class="expand-btn" data-toggle="collapse" data-target="#resource-items-<?php echo($value)?>">  <i class="fas fa-chevron-down"></i> </button>  
+        </div>    
+                
        <?php 
-      
-        while($taggedPosts->have_posts()) {
-            $taggedPosts->the_post(); 
-            
-            get_template_part('content-archive-resources');
+         while($taggedPosts->have_posts()) {
+            $taggedPosts->the_post(); ?>
+            <div id="resource-items-<?php echo($value)?>" class="collapse">
+            <?php            
+            get_template_part('content-archive-resources');?>
+            </div><?php
            } 
       }                             
    }
 ?>
-      
     
-</div><?php
+<!--</div>-->
+
+<?php
 
 ct_period_pagination();
 
