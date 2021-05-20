@@ -4,7 +4,7 @@ get_template_part( 'content/archive-header' );
 
 do_action( 'after_archive_header' ); ?>
 
-<!--<div id="loop-container" class="loop-container">-->
+<div id="loop-container" class="loop-container">
 	
     <?php
         $key = 'category';
@@ -20,8 +20,7 @@ do_action( 'after_archive_header' ); ?>
         ?>
         <div class="filters-container">
         <h2> <?php echo ($value);  ?>  </h2>
-        <!--<button type="button" data-toggle="collapse-container" data-target="#resource-items"><i class="fas fa-chevron-down"></i></button>-->
-            <button class="expand-btn" data-toggle="collapse" data-target="#resource-items-<?php echo($value)?>">  <i class="fas fa-chevron-down"></i> </button>  
+           <button class="expand-btn" data-toggle="collapse" data-target="#resource-items-<?php echo($value)?>">  <i class="fas fa-chevron-down"></i> </button>  
         </div>    
                 
        <?php 
@@ -36,7 +35,7 @@ do_action( 'after_archive_header' ); ?>
    }
 ?>
     
-<!--</div>-->
+</div>
 
 <?php
 
