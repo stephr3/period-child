@@ -39,7 +39,5 @@ do_action( 'after_archive_header' ); ?>
 
 <?php
 
-ct_period_pagination();
-
 get_footer();
 
