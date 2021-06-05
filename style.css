@@ -68,6 +68,16 @@ body {
   font-weight: bold;
   white-space: nowrap;
 }
+
+#site-header .max-width {
+  width: 100%;
+  display: grid;
+}
+
+#site-header .max-width .title-container {
+  text-align: center;
+}
+
 /* Custom Styles */
 .no-bullets {
   list-style: none;
