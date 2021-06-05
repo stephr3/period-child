@@ -13,7 +13,7 @@
 
     add_filter('acf/fields/google_map/api', 'googleMapKey');
     function googleMapKey($api) {
-        $api['key'] = getenv("Google_Map_API_Key"));
+        $api['key'] = getenv("Google_Map_API_Key");
         return $api;
     }
 ?>
