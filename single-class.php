@@ -75,16 +75,6 @@ do_action( 'after_archive_header' ); ?>
 					<?php if( get_field('summer_classes') == 'Yes' ): ?>
 						<li><b>Summer Classes:</b> Summer classes are available.</li>
 					<?php endif ?>
-
-					<?php if(current_user_can( 'administrator' )): ?>
-						<?php if( get_field('students_served') ): ?>
-							<li><b>Students Served:</b> <?php the_field('students_served'); ?></li>
-						<?php endif ?>
-
-						<?php if( get_field('notes') ): ?>
-							<li><b>Admin Notes:</b> <p class="class-description"><?php the_field('notes'); ?></p></li>
-						<?php endif ?>
-					<?php endif ?>
 				</ul>
 
 				<?php if( get_field('description') ): ?>			
@@ -117,10 +107,27 @@ do_action( 'after_archive_header' ); ?>
 						<?php endif ?>
 
 					<?php else: ?>
+						<h3>Volunteer Information</h3>
 						<li><i>No volunteers needed at this time.</i></li>	
 					<?php endif ?>
 				</ul>
 			</div>
+			<?php if(current_user_can( 'administrator' )): ?>
+						<h3>Administrative Notes</h3>
+						<p><b>Students Served:</b> 
+							<?php if( get_field('students_served') ): ?>
+								<?php the_field('students_served'); ?>
+							<?php else: ?>
+								<i>Not recorded.</i>
+							<?php endif ?>
+						</p>
+						<p class="class-description"><b>Notes:</b> 
+							<?php if( get_field('notes') ): ?>
+								<?php the_field('notes'); ?>
+							<?php else: ?>
+								<i>No notes recorded.</i>
+							<?php endif ?>						</p>
+			<?php endif ?>
 			<nav class="further-reading">
 				<div class="previous">
 					<a href="<?php echo get_post_type_archive_link( 'class' ); ?>">Back to Classes</a>						

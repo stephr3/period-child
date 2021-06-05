@@ -17,7 +17,11 @@ do_action( 'after_archive_header' ); ?>
             $wp_query->the_post();
             ct_period_get_content_template();
         endwhile;
-    endif;
+    else :?>
+        <div class="filters-container">
+            <p>No results for this search.</p>
+        </div>
+    <?php endif;
     ?>
 </div><?php
 
