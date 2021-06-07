@@ -37,6 +37,8 @@ body {
   background-color: white;
   padding: 1.5em;
   margin-bottom: .75em;
+  display: grid;
+  grid-template-columns: 90% auto;
 }
 
 .main-search-content-container{

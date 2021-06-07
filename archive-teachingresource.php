@@ -18,9 +18,9 @@ do_action( 'after_archive_header' ); ?>
             'meta_value'=> $value
          ));
         ?>
-        <div class="filters-container">
-        <h2> <?php echo ($value);  ?>  </h2>
-           <button class="expand-btn" data-toggle="collapse" data-target="#resource-items-<?php echo($value)?>">  <i class="fas fa-chevron-down"></i> </button>  
+        <div class="filters-container" class="expand-btn" data-toggle="collapse" data-target="#resource-items-<?php echo($value)?>">
+           <h2> <?php echo ($value);  ?>  </h2>
+           <button class="expand-btn" data-toggle="collapse" data-target="#resource-items-<?php echo($value)?>">  <i class="fas fa-chevron-down fa-2x"></i> </button>  
         </div>    
                 
        <?php 
