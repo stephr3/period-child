@@ -57,15 +57,20 @@ function filter_generator_multivalue($key, $value, &$toPopulate, $mappedValues) 
 		return;
 	}
 
+	$filters = 	$filters = array(
+		'relation' => 'OR',
+	);
 	for($i = 0; $i < count($value); ++$i) {
 		if(array_key_exists(sanitize_text_field($value[$i]), $mappedValues)){
-			array_push($toPopulate, array(
+			array_push($filters, array(
 				'key' => $key,
 				'value' => $mappedValues[sanitize_text_field($value[$i]) -1],
 				'compare' => 'LIKE',
 			));
 		}
 	}
+
+	array_push($toPopulate, $filters);
 }
 
 function is_set_in_url($param) {
