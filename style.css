@@ -33,6 +33,11 @@ body {
     text-decoration: underline;
 }
 
+.front-page-container {
+  background-color: white;
+  padding: .75em;
+}
+
 .filters-container {
   background-color: white;
   padding: 1.5em;
