@@ -13,7 +13,7 @@ if(isset($_GET['s'])) {
 	<div class="main-search-content-container container" >
 		<div class="search-container container">
 			<input type="text" placeholder="Search.." name="s" value="<?php echo esc_attr($search); ?>">
-			<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+			<button type="submit"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
 		</div>
 	</div>
 </form>
