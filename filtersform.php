@@ -14,6 +14,7 @@ if(isset($_GET['s'])) {
 	<div class="filters-options container">
 		<div class="col">
 			<div class="region container col">
+				<h1>Filter Search</h1>
 				<label class="filters-label"> 
 					<span > Regions </span>
 				</label>
