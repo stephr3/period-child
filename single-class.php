@@ -112,7 +112,7 @@ do_action( 'after_archive_header' ); ?>
 					<?php endif ?>
 				</ul>
 			</div>
-			<?php if(current_user_can( 'administrator' )): ?>
+			<?php if(current_user_can( 'manage_options' )): ?>
 						<h3>Administrative Notes</h3>
 						<p><b>Students Served:</b> 
 							<?php if( get_field('students_served') ): ?>
