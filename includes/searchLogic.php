@@ -29,9 +29,9 @@ function searchResults() {
 		'post_type' 		=> 'class',
 		'posts_per_page'	=> 10,
 		'paged'				=> get_query_var('paged') ? get_query_var('paged') : 1,
-		'meta_key' 			=> 'happening_now',
+		'meta_key' 			=> 'name',
 		'orderby'			=> 'meta_value',
-		'order' 			=> 'DESC', 
+		'order' 			=> 'ASC', 
 		's' 				=> sanitize_text_field(is_set_in_url('s')),
 		'meta_query'		=> $filters,
 	));
