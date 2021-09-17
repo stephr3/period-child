@@ -10,7 +10,7 @@ $wp_query = new WP_query(array(
 	));
 ?>
 
-<div class="front-page-container"><p>The Portland ESL Network is an organization dedicated to sharing information about ESL classes and resources in the Portland Metro area. We hope that students, teachers, and volunteers can find classes in their neighborhoods.</p><p>Explore the map below or <a href="<?php get_home_url()?>/classes" style="color:#206b9f; font-size: 1.1em;">click here to search for a class.</a></p></div>
+<div class="front-page-container"><p>Explore the map below or <a href="<?php get_home_url()?>/classes" style="color:#206b9f; font-size: 1.1em;">click here</a> to search for an ESL class in the Portland Metro area.</p></div>
 
 <div class="acf-map">
     <?php
