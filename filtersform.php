@@ -202,8 +202,8 @@ if(isset($_GET['s'])) {
 					<span > Volunteers needed? </span>
 				</label>
 				<div class="form-group" id="vn">
-					<input type="checkbox" class="checkbox" id="volunteers-needed" name="vn" value=1>
-					<label for="yes"> Yes </label>
+					<input type="checkbox" class="checkbox" id="volunteers-needed" name="vn" value="1">
+					<label for="Yes"> Yes </label>
 				</div>
 			</div>
 		</div>

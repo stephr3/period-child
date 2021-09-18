@@ -40,7 +40,7 @@ function searchResults() {
 }
 
 function filter_generator_singlevalue($key, $value, &$toPopulate, $mappedValues) {
-	if(empty($value) || !array_key_exists(sanitize_text_field($value), $mappedValues)) {
+	if(empty($value) || !array_key_exists(sanitize_text_field($value) -1, $mappedValues)) {
 		return;
 	}
 	array_push($toPopulate, array(
