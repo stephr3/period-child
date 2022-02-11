@@ -30,7 +30,7 @@ do_action( 'after_archive_header' ); ?>
 						<li><b>Email:</b> <?php the_field('email'); ?></li>
 					<?php endif ?>						
 					<?php if( get_field('url') ): ?>
-						<li><b>URL:</b> <?php the_field('url'); ?></li>
+						<li><b>URL:</b> <a href = "<?php the_field('url'); ?>" target=”_blank”><?php the_field('url'); ?></a> </li>
 					<?php endif ?>				
 				</ul>
 
