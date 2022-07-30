@@ -8,7 +8,25 @@ do_action( 'after_archive_header' ); ?>
 	<article>
 		<div class="post-container">
 			<div class='post-header'>
-				<h1 class='post-title'><?php the_title(); ?></h1>
+				<h1 class='post-title'><?php 
+											if(get_field('class_format') == 'Virtual'):
+									   			?>
+									   		V 
+										    <?php 
+										    	endif;
+												if(get_field('class_format') == 'In-Person'):
+										    ?>
+										    I
+										    <?php 
+										    	endif;
+												if(get_field('class_format') == 'Hybrid' || get_field('class_format') == 'Flexible'):
+										    ?>
+										    H
+										    <?php	
+										    	endif;								   
+										    the_title(); 
+										    ?>
+				</h1>
 			</div>
 			<div class="post-content">
 				<p class="last-updated">Last updated on <?php echo get_the_modified_date() ?></p>

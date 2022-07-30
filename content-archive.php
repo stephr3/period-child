@@ -6,7 +6,26 @@
 			<div class='post-header'>
 				<?php do_action( 'sticky_post_status' ); ?>
 				<h2 class='post-title'>
-					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a>
+					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php 
+											if(get_field('class_format') == 'Virtual'):
+									   			?>
+									   		V 
+										    <?php 
+										    	endif;
+												if(get_field('class_format') == 'In-Person'):
+										    ?>
+										    I
+										    <?php 
+										    	endif;
+												if(get_field('class_format') == 'Hybrid' || get_field('class_format') == 'Flexible'):
+										    ?>
+										    H
+										    <?php	
+										    	endif;								   
+										    the_title(); 
+										    ?>
+										    	
+					</a>
 				</h2>
 			</div>
 			<div class="post-content">

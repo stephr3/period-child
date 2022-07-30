@@ -21,7 +21,24 @@ $wp_query = new WP_query(array(
 				if (!empty($mapLocation)){
 					?>
 					<div class="marker" data-lat="<?php echo $mapLocation['lat']; ?>" data-lng="<?php echo $mapLocation['lng'] ?>" >
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<h3><a href="<?php the_permalink(); ?>"><?php 
+											if(get_field('class_format') == 'Virtual'):
+									   			?>
+									   		V 
+										    <?php 
+										    	endif;
+												if(get_field('class_format') == 'In-Person'):
+										    ?>
+										    I
+										    <?php 
+										    	endif;
+												if(get_field('class_format') == 'Hybrid' || get_field('class_format') == 'Flexible'):
+										    ?>
+										    H
+										    <?php	
+										    	endif;								   
+										    the_title(); 
+										    ?></a></h3>
 						<?php echo $mapLocation['address']; ?> 
 						<br>
 						<?php the_field('phone'); ?>
