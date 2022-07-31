@@ -10,7 +10,7 @@ $wp_query = new WP_query(array(
 	));
 ?>
 
-<div class="front-page-container"><p>Explore the map below or <a href="<?php get_home_url()?>/classes" style="color:#206b9f; font-size: 1.1em;">click here</a> to search for an ESL class in the Portland Metro area.</p></div>
+<div class="front-page-container"><p>Explore the map below or <a href="<?php get_home_url()?>/classes" style="color:#206b9f; font-size: 1.1em;">click here</a> to search for an ESL class in the Portland Metro area.</p><p><span class="dashicons dashicons-laptop"></span>: Virtual Classes <span class="dashicons dashicons-admin-users"></span>: In-Person Classes</p></div>
 
 <div class="acf-map">
     <?php
