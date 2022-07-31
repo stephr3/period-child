@@ -33,6 +33,11 @@ body {
     text-decoration: underline;
 }
 
+.front-page-container {
+  background-color: white;
+  padding: .75em;
+}
+
 .filters-container {
   background-color: white;
   padding: 1.5em;
@@ -66,9 +71,14 @@ body {
 .form-group {
   white-space: nowrap;
 }
+.filters-options {
+  display: contents;
+}
+
 .filters-label {
   font-weight: bold;
   white-space: nowrap;
+  font-size: 1.2rem;
 }
 
 #site-header .max-width {

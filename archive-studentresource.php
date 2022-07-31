@@ -9,17 +9,18 @@ do_action( 'after_archive_header' ); ?>
     <?php
         $key = 'tag';
         $field = acf_get_field($key);
+        
       
     if ($field) {
-       foreach ($field['choices'] as $key => $value) {
+       foreach ($field['choices'] as $value => $label) {
         $taggedPosts = new WP_Query(array(
             'post_type' => 'studentresource',
             'posts_per_page' => 10,
-            'meta_value'=> $value
+            'meta_value' => $value           
          ));
         ?>
         <div class="filters-container" class="expand-btn" data-toggle="collapse" data-target="#resource-items-<?php echo($value)?>">
-        <h2> <?php echo ($value);  ?>  </h2>
+            <h2> <?php echo ($label);  ?>  </h2>
             <button class="expand-btn" data-toggle="collapse" data-target="#resource-items-<?php echo($value)?>">  <i class="fas fa-chevron-down fa-2x"></i> </button>  
         </div>    
                 

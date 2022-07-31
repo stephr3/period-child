@@ -22,13 +22,11 @@ do_action( 'after_archive_header' ); ?>
 				
 				<h4>Tag(s)</h4>
                 <ul class="no-bullets">
-                <?php if( get_field('tag') ): ?>
-						<li><?php the_field('tag'); ?></li>
+                <?php if( get_field('category') ): ?>
+						<li><?php the_field('category'); ?></li>
 					<?php endif ?>
                 </ul>
-				<!--<h4>Site Preview</h4>
-				<iframe width="700" height="400" src="<?php the_field('resource_link');?>"></iframe>
-				<br>-->			
+						
 			</div>
 			<nav class="further-reading">
 				<div class="previous">

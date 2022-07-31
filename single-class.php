@@ -48,7 +48,7 @@ do_action( 'after_archive_header' ); ?>
 						<li><b>Email:</b> <?php the_field('email'); ?></li>
 					<?php endif ?>						
 					<?php if( get_field('url') ): ?>
-						<li><b>URL:</b> <?php the_field('url'); ?></li>
+						<li><b>URL:</b> <a href = "<?php the_field('url'); ?>" target=”_blank”><?php the_field('url'); ?></a> </li>
 					<?php endif ?>				
 				</ul>
 
@@ -130,7 +130,7 @@ do_action( 'after_archive_header' ); ?>
 					<?php endif ?>
 				</ul>
 			</div>
-			<?php if(current_user_can( 'administrator' )): ?>
+			<?php if(current_user_can( 'manage_options' )): ?>
 						<h3>Administrative Notes</h3>
 						<p><b>Students Served:</b> 
 							<?php if( get_field('students_served') ): ?>

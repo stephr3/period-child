@@ -29,9 +29,9 @@ function searchResults() {
 		'post_type' 		=> 'class',
 		'posts_per_page'	=> 10,
 		'paged'				=> get_query_var('paged') ? get_query_var('paged') : 1,
-		'meta_key' 			=> 'happening_now',
+		'meta_key' 			=> 'name',
 		'orderby'			=> 'meta_value',
-		'order' 			=> 'DESC', 
+		'order' 			=> 'ASC', 
 		's' 				=> sanitize_text_field(is_set_in_url('s')),
 		'meta_query'		=> $filters,
 	));
@@ -40,7 +40,7 @@ function searchResults() {
 }
 
 function filter_generator_singlevalue($key, $value, &$toPopulate, $mappedValues) {
-	if(empty($value) || !array_key_exists(sanitize_text_field($value), $mappedValues)) {
+	if(empty($value) || !array_key_exists(sanitize_text_field($value) -1, $mappedValues)) {
 		return;
 	}
 	array_push($toPopulate, array(
@@ -57,15 +57,20 @@ function filter_generator_multivalue($key, $value, &$toPopulate, $mappedValues) 
 		return;
 	}
 
+	$filters = 	$filters = array(
+		'relation' => 'OR',
+	);
 	for($i = 0; $i < count($value); ++$i) {
 		if(array_key_exists(sanitize_text_field($value[$i]), $mappedValues)){
-			array_push($toPopulate, array(
+			array_push($filters, array(
 				'key' => $key,
 				'value' => $mappedValues[sanitize_text_field($value[$i]) -1],
 				'compare' => 'LIKE',
 			));
 		}
 	}
+
+	array_push($toPopulate, $filters);
 }
 
 function is_set_in_url($param) {
