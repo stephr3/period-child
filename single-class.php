@@ -11,17 +11,17 @@ do_action( 'after_archive_header' ); ?>
 				<h1 class='post-title'><?php 
 											if(get_field('class_format') == 'Virtual'):
 									   			?>
-									   		V 
+									   		<span class="dashicons dashicons-laptop"></span> 
 										    <?php 
 										    	endif;
 												if(get_field('class_format') == 'In-Person'):
 										    ?>
-										    I
+										    <span class="dashicons dashicons-admin-users"></span>
 										    <?php 
 										    	endif;
 												if(get_field('class_format') == 'Hybrid' || get_field('class_format') == 'Flexible'):
 										    ?>
-										    H
+									   		<span class="dashicons dashicons-laptop"></span> <span class="dashicons dashicons-admin-users"></span> 
 										    <?php	
 										    	endif;								   
 										    the_title(); 
