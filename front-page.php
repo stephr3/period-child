@@ -24,22 +24,17 @@ $wp_query = new WP_query(array(
 					?>
 					<div class="marker" data-lat="<?php echo $mapLocation['lat']; ?>" data-lng="<?php echo $mapLocation['lng'] ?>" >
 						<h3><a href="<?php the_permalink(); ?>"><?php 
-											if(get_field('class_format') == 'Virtual'):
+											if(in_array('Virtual', get_field('class_format'))):
 									   			?>
-									   		<span class="dashicons dashicons-laptop"></span> 
+									   		<span class="dashicons dashicons-laptop"></span>
 										    <?php 
 										    	endif;
-												if(get_field('class_format') == 'In-Person'):
+												if(in_array('In Person', get_field('class_format'))):
 										    ?>
 										    <span class="dashicons dashicons-admin-users"></span>
-										    <?php 
-										    	endif;
-												if(get_field('class_format') == 'Hybrid' || get_field('class_format') == 'Flexible'):
-										    ?>
-									   		<span class="dashicons dashicons-laptop"></span> <span class="dashicons dashicons-admin-users"></span> 
 										    <?php	
 										    	endif;								   
-										    the_title(); 
+										    the_title();
 										    ?></a></h3>
 						<?php echo $mapLocation['address']; ?> 
 						<br>

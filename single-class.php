@@ -9,22 +9,17 @@ do_action( 'after_archive_header' ); ?>
 		<div class="post-container">
 			<div class='post-header'>
 				<h1 class='post-title'><?php 
-											if(get_field('class_format') == 'Virtual'):
+											if(in_array('Virtual', get_field('class_format'))):
 									   			?>
-									   		<span class="dashicons dashicons-laptop"></span> 
+									   		<span class="dashicons dashicons-laptop"></span>
 										    <?php 
 										    	endif;
-												if(get_field('class_format') == 'In-Person'):
+												if(in_array('In Person', get_field('class_format'))):
 										    ?>
 										    <span class="dashicons dashicons-admin-users"></span>
-										    <?php 
-										    	endif;
-												if(get_field('class_format') == 'Hybrid' || get_field('class_format') == 'Flexible'):
-										    ?>
-									   		<span class="dashicons dashicons-laptop"></span> <span class="dashicons dashicons-admin-users"></span> 
 										    <?php	
 										    	endif;								   
-										    the_title(); 
+										    the_title();
 										    ?>
 				</h1>
 			</div>
